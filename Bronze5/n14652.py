@@ -5,12 +5,4 @@
 
 n, m, k = map(int, input().split())
 
-seat = [i for i in range(n * m)]
-ground = [0] * n
-
-for i in seat:
-    for j in range(n):
-        for k in range(m):
-            ground[j][k] = i
-
-print(ground)
+print(k // m, k % m)

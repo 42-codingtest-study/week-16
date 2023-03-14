@@ -1,4 +1,3 @@
-# 질문
 #
 # 2738
 # 행렬 덧셈
@@ -8,22 +7,19 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-arr1 = [0, 0, 0]
-arr2 = [0, 0, 0]
-result = [0, 0, 0]
+arr1 = []
+arr2 = []
+result = [0] * n
 
-for i in range(n):
-    arr1[i] = list(map(int, input().split()))
-for i in range(n):
-    arr2[i] = list(map(int, input().split()))
+for row in range(n):
+    row = list(map(int, input().split()))
+    arr1.append(row)
 
-for i in range(3):
-    li = [0, 0, 0]
-    for j in range(3):
-        li[j] = arr1[i][j] + arr2[i][j]
-    result[i] = li
+for row in range(n):
+    row = list(map(int, input().split()))
+    arr2.append(row)
 
-for i in result:
-    for j in i:
-        print(j, end=' ')
+for row in range(n):
+    for col in range(m):
+        print(arr1[row][col] + arr2[row][col], end=' ')
     print()

@@ -3,7 +3,12 @@
 # Gum Gum for Jay Jay
 # https://www.acmicpc.net/problem/26489
 
-import sys
-input = sys.stdin.readline
+count = 0
 
-x = input()
+while 1:
+    try:
+        x = input()
+        count += 1
+    except:
+        break
+print(count)
